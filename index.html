@@ -1,0 +1,110 @@
+<!doctype html>
+
+<html>
+    <head>
+        <!-- Recommended meta tags -->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+        <!-- PyScript CSS -->
+        <link rel="stylesheet" href="https://pyscript.net/releases/2024.1.1/core.css">
+        <!-- CSS for examples -->
+        <link rel="stylesheet" href="./assets/css/examples.css" />
+
+        <!-- This script tag bootstraps PyScript -->
+        <script type="module" src="https://pyscript.net/releases/2024.1.1/core.js"></script>
+
+    </head>
+
+    <body>
+        <section class="pyscript">
+            <main>
+                <section>
+                        <div class="main-container">
+                            <div>
+                        <h1>ML Generative AI</h1>
+                    </div>
+                            <div class="title-top">
+                                <h1>กรอกข้อมูลเกี่ยวกับอาหารที่ต้องการ</h1>
+
+                            </div>
+                            <div class="line-under">
+                                <div class="line-left">
+                                    <hr>
+                                </div>
+                                <div class="line-right">
+                                    <hr>
+                                </div>
+                            </div>
+                            <div class="container-one">
+                                <div class="sub-one"><p>ประเภทอาหาร:</p></div>
+                                <select name="" id="task-foodType"  required>
+                                <option value="" disabled selected>Select</option>
+                                <option value="ขนมหวาน">ขนมหวาน</option>
+                                <option value="เครื่องดื่ม">เครื่องดื่ม</option>
+                                <option value="อาหารทั่วไป">อาหารทั่วไป</option>
+                                </select>
+                            </div>
+                            <div class="container-two">
+                                <div class=""><p>แคลอรี่:</p></div>
+                                <input id="task-foodCal" type="number" value="0" min=0 max=600 required />
+                            </div>
+                            <div class="container-three">
+                                <div class="sub-three"><p>รสชาติ: </p></div>
+                                <select name="" id="task-foodTaste" required>
+                                <option value="" disabled selected>Select</option>
+                                <option value="รสเผ็ด">รสเผ็ด</option>
+                                <option value="รสเปรี้ยว">รสเปรี้ยว</option>
+                                <option value="รสหวาน">รสหวาน</option>
+                                <option value="รสเค็ม">รสเค็ม</option>
+                                <option value="รสครีมมี่">รสครีมมี่</option>
+                                <option value="รสจืด">รสจืด</option>
+
+                                </select>
+                            </div>
+                            <div class="container-four">
+                                <div class="sub-four"><p>ประเทศ</p></div>
+                                <select name="cars" id="task-foodCountry" required>
+                                <option value="" disabled selected>Select</option>
+                                <option value="ไทย">ไทย</option>
+                                <option value="อังกฤษ">อังกฤษ</option>
+                                <option value="โปรตุเกส">โปรตุเกส</option>
+                                <option value="อิตาลี">อิตาลี</option>
+                                <option value="เยอรมนี">เยอรมนี</option>
+                                <option value="ฝรั่งเศส">ฝรั่งเศส</option>
+                                <option value="จีน">จีน</option>
+                                <option value="เกาหลี">เกาหลี</option>
+                                <option value="ญี่ปุ่น">ญี่ปุ่น</option>
+                                <option value="อินเดีย">อินเดีย</option>
+                                </select>
+                            </div>
+                            <form>
+                                <div class="container-five">
+                                    <label for="vehicle1">คลีน</label><br>
+                                    <input type="checkbox" id="task-foodClean" name="" value="คลีน">
+                                    <br>
+                                    <label for="vehicle1">ฮาลาล</label><br>
+                                    <input type="checkbox" id="task-foodHalan" name="" value="ฮาลาล">
+                                </div>
+                            </form>
+                            <button id="new-task-btn" type="submit" py-click="add_task">
+                                Add task
+                            </button>
+                            <hr class="underline">
+                        </div>
+                        <div id="task-foodshow-1"></div>
+                        <div id="task-foodshow-2"></div>
+                        <div id="task-foodshow-3"></div>
+                        <div id="task-foodshow-4"></div>
+                        <div id="task-foodshow-5"></div>
+                        <div id="task-foodshow-6"></div>
+                        <button id="refresh-btn" py-click="refresh_page">
+                            Refresh Page
+                        </button>
+                </section>
+            </main>
+
+            <script type="py" src="./main.py" config="./pyscript.toml"></script>
+        </section>
+    </body>
+</html>
